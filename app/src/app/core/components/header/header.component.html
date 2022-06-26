@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-3 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img class="logo" [src]="logoPath" alt="sadge" >
+    </a>
+    <a class="navbar-brand" routerLink="/">Floppito</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Главная</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Категории
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li *ngFor="let category of categories"><a class="dropdown-item" (click)="byCategory(category.id)">{{category.title}}</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div *ngIf="_userStorage.isAdmin()" class="admin-panel">
+        <button mat-raised-button color="primary" routerLink="/admin">Админ-панель</button>
+      </div>
+
+      <div class="ad">
+        <button mat-raised-button color="primary" routerLink="/post/edit">Подать объявление</button>
+      </div>
+     
+      <div *ngIf="!_userStorage.user; else authed" class="auth">
+        <button mat-raised-button color="primary" routerLink="/login">Вход</button>
+        <button mat-raised-button color="primary" routerLink="/signup">Регистрация</button>
+      </div>
+
+      <div class="search d-flex">
+        <input #searchString class="form-control search" type="search" placeholder="Поиск..." aria-label="Search">
+        <a class="btn btn-outline-secondary" title="Расширенный поиск" routerLink="/search">
+          <mat-icon>tune</mat-icon>
+        </a>
+        
+        <button class="btn btn-outline-success" (click)="search(searchString.value)">Поиск</button>
+      </div>
+
+      <ng-template #authed>
+        <div class="auth">
+          <div class="dropdown">
+            <a class="dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="avatar rounded-circle" [src]="_userStorage.user?.avatarUrl">             
+            </a>
+                      
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" role="button" routerLink="/chat">Сообщения</a></li>
+              <li><a class="dropdown-item" role="button" routerLink="/user/{{_userStorage.user?.id}}">Профиль</a></li>
+              <li><a class="dropdown-item" role="button" routerLink="/user/settings/{{_userStorage.user?.id}}">Настройки</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" role="button" (click)="logout()">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</nav>

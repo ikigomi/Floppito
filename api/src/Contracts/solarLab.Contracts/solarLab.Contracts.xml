@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>solarLab.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:solarLab.Contracts.Base.BaseDto">
+            <summary>
+            Базовый класс DTO.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Base.BaseDto.Id">
+            <summary>
+            Идентификатор.
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Category.CategoryDto">
+            <summary>
+            Модель категории
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Category.CategoryDto.Title">
+            <summary>
+            Название категории
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Chat.ChatDto">
+            <summary>
+            Модель чата
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Chat.ChatDto.Messages">
+            <summary>
+            Коллекция сообщений
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Chat.ChatDto.Members">
+            <summary>
+            Коллекция участников
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Comment.CommentDto">
+            <summary>
+            Модель представления комментариев к объявлению.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Comment.CommentDto.PostId">
+            <summary>
+            Идентификатор объявления.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Comment.CommentDto.CommentBody">
+            <summary>
+            Тело комментария.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Comment.CommentDto.Author">
+            <summary>
+            Автор
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Comment.CommentDto.CreationDate">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Enums.Gender">
+            <summary>
+            Пол.
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.Gender.Undefined">
+            <summary>
+            Неопределен.
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.Gender.Male">
+            <summary>
+            Мужской.
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.Gender.Female">
+            <summary>
+            Женский.
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Enums.PostStatus">
+            <summary>
+            Статус поста
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.PostStatus.New">
+            <summary>
+            Новый
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.PostStatus.Accepted">
+            <summary>
+            Принятый
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.PostStatus.Rejected">
+            <summary>
+            Отклоненный
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Enums.Roles">
+            <summary>
+            Роли приложения
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.Roles.User">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="F:solarLab.Contracts.Enums.Roles.Admin">
+            <summary>
+            Администратор
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Errors.Error">
+            <summary>
+            Модель ошибки
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Errors.Error.Message">
+            <summary>
+            Сообщение
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Errors.ErrorsResponse">
+            <summary>
+            Модель ответа при возникновении исключений
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Errors.ErrorsResponse.Errors">
+            <summary>
+            Ошибки
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.ChangePasswordDto">
+            <summary>
+            Модель изменения пароля
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ChangePasswordDto.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ChangePasswordDto.OldPassword">
+            <summary>
+            Старый пароль
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ChangePasswordDto.NewPassword">
+            <summary>
+            Новый пароль
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ChangePasswordDto.ConfirmNewPassword">
+            <summary>
+            Подтверждение пароля
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.ExternalLoginDto">
+            <summary>
+            Модель для входа через сторонний сервис
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ExternalLoginDto.Provider">
+            <summary>
+            Название сервиса
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ExternalLoginDto.IdToken">
+            <summary>
+            Токен
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.ForgotPasswordDto">
+            <summary>
+            Модель для восстановление пароля
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ForgotPasswordDto.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ForgotPasswordDto.ClientURI">
+            <summary>
+            Адрес для callback 
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.LoginDto">
+            <summary>
+            Модель входа
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.LoginDto.Email">
+            <summary>
+            Emial
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.LoginDto.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.LoginResponse">
+            <summary>
+            Модель ответа при успешном входе
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.LoginResponse.Token">
+            <summary>
+            Токен авторизации
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.LoginResponse.User">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.RegisterDto">
+            <summary>
+            Модель регистрации
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.UserName">
+            <summary>
+            Логин
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.ConfirmPassword">
+            <summary>
+            Подтверждение пароля
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.Name">
+            <summary>
+            Имя
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.BirthDate">
+            <summary>
+            Дата рождения
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.Gender">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.Avatar">
+            <summary>
+            Аватар
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.RegisterDto.PhoneNumber">
+            <summary>
+            Номер телефона
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Identity.ResetPasswordDto">
+            <summary>
+            Модель для сброса пароля
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ResetPasswordDto.Password">
+            <summary>
+            Пароль
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ResetPasswordDto.ConfirmPassword">
+            <summary>
+            Подтверждение пароля
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ResetPasswordDto.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Identity.ResetPasswordDto.Token">
+            <summary>
+            Токен
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Image.ImagePathsResponse">
+            <summary>
+            Модель с коллекцией путей к картинкам для постов
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Image.ImagePathsResponse.Paths">
+            <summary>
+            Пути к картинкам
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Message.MessageDto">
+            <summary>
+            Модель сообщения
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Message.MessageDto.ChatId">
+            <summary>
+            Идентификатор чата
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Message.MessageDto.Body">
+            <summary>
+            Тело сообщения
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Message.MessageDto.CreationDate">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Message.MessageDto.Author">
+            <summary>
+            Автор
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Post.PostDto">
+            <summary>
+            Модель объявления
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.Title">
+            <summary>
+            Заголовок объявления.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.Description">
+            <summary>
+            Описание объявления.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.Author">
+            <summary>
+            Автор
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.CategoryId">
+            <summary>
+            Идентификатор категории.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.CategoryTitle">
+            <summary>
+            Название категории.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.Images">
+            <summary>
+            Картинки объявления.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.CreationDate">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.Post.PostDto.Comments">
+            <summary>
+            Коллекция комментариев.
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.User.AuthorDto">
+            <summary>
+            Модель автора сущности
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.AuthorDto.UserName">
+            <summary>
+            Имя автора объявления.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.AuthorDto.Avatar">
+            <summary>
+            Аватарка автора объявления.
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.User.UserDto">
+            <summary>
+            Модель представления пользователя
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.UserName">
+            <summary>
+            Логин
+            </summary>  
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.Name">
+            <summary>
+            Имя
+            </summary>  
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.Email">
+            <summary>
+            Адресс почты
+            </summary>  
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.PhoneNumber">
+            <summary>
+            Номер телефона
+            </summary>  
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.BirthDate">
+            <summary>
+            Дата рождения.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.Gender">
+            <summary>
+            Пол.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.Avatar">
+            <summary>
+            Аватарка пользователя.
+            </summary>
+        </member>
+        <member name="P:solarLab.Contracts.User.UserDto.Roles">
+            <summary>
+            Роли пользователя
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Base.BaseDtoValidator">
+            <summary>
+            Валидатор для базовой модели
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Category.CategoryDtoValidator">
+            <summary>
+            Валидатор для модели поста
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Comment.CommentDtoValidator">
+            <summary>
+            Валидатор для модели комментария
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Identity.ChangePasswordDtoValidator">
+            <summary>
+            Валидатор для модели смены пароля
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Identity.LoginDtoValidator">
+            <summary>
+            Валидатор для модели входа
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Identity.RegisterDtoValidator">
+            <summary>
+            Валидатор для модели регистрации
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.Post.PostDtoValidator">
+            <summary>
+            Валидатор для модели поста
+            </summary>
+        </member>
+        <member name="T:solarLab.Contracts.Validators.User.UserDtoValidator">
+            <summary>
+            Валидатор для модели пользователя
+            </summary>
+        </member>
+    </members>
+</doc>

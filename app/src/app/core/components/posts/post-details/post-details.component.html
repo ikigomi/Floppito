@@ -1,0 +1,65 @@
+<div *ngIf="post; else emptyData">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar><a routerLink="/user/{{post.author.id}}"><img class="rounded-circle avatar"
+            [src]="post.author.avatarUrl"></a></div>
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-subtitle>
+        <a routerLink="/user/{{post.author.id}}">
+          <p>{{post.author.userName}}</p>
+        </a>
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        <a [routerLink]="['/posts/']" [queryParams]="{categoryId: post.categoryId }">{{post.categoryTitle}}</a>
+      </mat-card-subtitle>
+      <mat-card-subtitle *ngIf="post.salaryFrom || post.salaryTo">
+        <span *ngIf="post.salaryFrom">От {{post.salaryFrom}}</span> <span *ngIf="post.salaryTo"> до
+          {{post.salaryTo}}</span> {{post.moneyCode | enum : 'MoneyCode' | array}}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div>
+        Требуемый опыт работы:
+        <ul>
+          <li *ngFor="let item of post.workExperience">
+            {{item | enum: 'Experience' | array}}
+          </li>
+          <li *ngIf="!post.workExperience.length">
+            {{'Не указано'}}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        Указанный график работы:
+        <ul>
+          <li *ngFor="let item of post.workSchedule">
+            {{item | enum: 'Schedule' | array}}
+          </li>
+          <li *ngIf="!post.workSchedule.length">
+            {{'Не указано'}}
+          </li>
+        </ul>
+      </div>
+      
+    </mat-card-content>
+    <mat-card-content>
+      <p>{{post.description}}</p>
+    </mat-card-content>
+    <div class="mat-images">
+      <img *ngFor="let imageUrl of post.images" [src]="imageUrl">
+    </div>
+
+    <div *ngIf="post.author.id===_userStorage.user?.id || _userStorage.isAdmin()" class="buttons">
+      <a mat-raised-button color="accent" routerLink="/post/edit/{{post.id}}">Редактировать</a>
+      <button mat-raised-button color="warn" (click)="delete(post.id)">Удалить</button>
+    </div>
+  </mat-card>
+  <app-comments [postId]="post.id" [comments]="post.comments!"></app-comments>
+</div>
+
+
+<ng-template #emptyData>
+  <h4>Нет данных</h4>
+</ng-template>

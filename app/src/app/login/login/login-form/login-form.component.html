@@ -1,0 +1,42 @@
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" [class.is-invalid]="emailControl?.invalid && emailControl?.touched"
+      id="email" placeholder="Логин" formControlName="email">
+    <div class="invalid-feedback" *ngIf="emailControl?.hasError('required')">
+      Введите email
+    </div>
+    <div class="invalid-feedback" *ngIf="emailControl?.hasError('email')">
+      Некорректный email
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Пароль</label>
+    <input type="password" id="password" [class.is-invalid]="passwordControl?.invalid && passwordControl?.touched"
+      class="form-control" formControlName="password">
+    <div class="invalid-feedback" *ngIf="passwordControl?.hasError('required')">
+      Введите пароль
+    </div>
+    <div class="invalid-feedback" *ngIf="passwordControl?.hasError('minlength')">
+      Пароль должен содержать больше 6 символов
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <button type="submit" class="btn btn-primary">Войти</button>
+    <button class="btn btn-primary" routerLink="/signup">Регистрация</button>
+  </div>
+</form>
+
+<div class="forgotPassword">
+  <a routerLink="forgotpassword">Забыли пароль?</a>
+</div>
+
+<div class="external">
+  <h2>Либо войти через:</h2>
+  <div class="d-flex justify-content-start">
+    <mat-icon svgIcon="google" class="google" title="Войти через google" (click)="externalLogin('google')"></mat-icon>
+    <mat-icon svgIcon="vk" class="vk" title="Войти через vk" (click)="externalLogin('vk')"></mat-icon>
+    <mat-icon svgIcon="facebook" class="facebook" title="Войти через facebook" (click)="externalLogin('facebook')">
+    </mat-icon>
+  </div>
+</div>

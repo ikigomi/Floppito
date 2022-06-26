@@ -1,0 +1,15 @@
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\solarLab.Infrastructure.deps.json
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\solarLab.Infrastructure.dll
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\ref\solarLab.Infrastructure.dll
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\solarLab.Infrastructure.pdb
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\solarLab.Contracts.dll
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\bin\Release\net5.0\solarLab.Contracts.pdb
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.csproj.AssemblyReference.cache
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.AssemblyInfoInputs.cache
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.AssemblyInfo.cs
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.csproj.CoreCompileInputs.cache
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.csproj.CopyComplete
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.dll
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\ref\solarLab.Infrastructure.dll
+E:\repos\solarLab\solarLab\src\Infrastructure\solarLab.Infrastructure\obj\Release\net5.0\solarLab.Infrastructure.pdb

@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-center row">
+        <div class="d-flex flex-column comment-section">
+          <div class="bg-white p-2">
+            <app-comments-section [comments]="comments" (onDelete)="delete($event)" (onAdd)="add($event)" (onEdit)="edit($event)"></app-comments-section>
+          </div>
+        </div>
+  </div>
+</div>
+

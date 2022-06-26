@@ -1,0 +1,12 @@
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\bin\Release\net5.0\solarLab.Contracts.deps.json
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\bin\Release\net5.0\solarLab.Contracts.dll
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\bin\Release\net5.0\ref\solarLab.Contracts.dll
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\bin\Release\net5.0\solarLab.Contracts.pdb
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.csproj.AssemblyReference.cache
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.AssemblyInfoInputs.cache
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.AssemblyInfo.cs
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.csproj.CoreCompileInputs.cache
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.dll
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\ref\solarLab.Contracts.dll
+E:\repos\solarLab\solarLab\src\Contracts\solarLab.Contracts\obj\Release\net5.0\solarLab.Contracts.pdb

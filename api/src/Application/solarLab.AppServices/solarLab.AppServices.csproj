@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>solarLab.AppServices.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.55.0" />
+    <PackageReference Include="MailKit" Version="2.15.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
+    <PackageReference Include="MimeKit" Version="2.15.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Contracts\solarLab.Contracts\solarLab.Contracts.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\solarLab.Infrastructure\solarLab.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Domain\solarLab.Domain\solarLab.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

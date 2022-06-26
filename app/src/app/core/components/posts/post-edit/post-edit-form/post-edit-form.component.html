@@ -1,0 +1,88 @@
+<form [formGroup]="editForm" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="title" class="form-label">Название</label>
+    <input type="text" class="form-control" [class.is-invalid]="titleControl?.invalid && titleControl?.touched"
+      id="title" placeholder="Название" formControlName="title">
+    <div class="invalid-feedback" *ngIf="titleControl?.hasError('required')">
+      Введите название
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Описание</label>
+    <textarea rows="5" class="form-control" id="description" placeholder="Описание" formControlName="description">
+      </textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="name" class="form-label">Категория</label>
+    <select type="text" class="form-control" [class.is-invalid]="categoryControl?.invalid && categoryControl?.touched"
+      id="categoryId" placeholder="Пол" formControlName="categoryId">
+      <option value="" disabled>Выберите категорию</option>
+      <option *ngFor="let category of categories" [value]="category.id">{{category.title}}</option>
+    </select>
+    <div class="invalid-feedback" *ngIf="categoryControl?.hasError('required')">
+      Выберите категорию
+    </div>
+  </div>
+
+  <label class="form-label">Зарплата от</label>
+  <div class="mb-5 row g-3 align-items-center">
+  <div class="col-auto">
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1000" [min]="salaryFromRange[0]" [max]="salaryFromRange[1]"
+      aria-label="units" [(ngModel)]="salaryFrom" formControlName="salaryFrom" [disabled]="HideSalaryFrom"></mat-slider>
+  </div>
+  <div class="col-auto">
+    <mat-checkbox class="example-margin" [(ngModel)]="HideSalaryFrom" [ngModelOptions]="{standalone: true}">Не указывать</mat-checkbox>
+  </div>
+
+  <label>до</label>
+  <div class="col-auto">
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="1000" step="1000" [min]="salaryToRange[0]" [max]="salaryToRange[1]"
+      aria-label="units" [(ngModel)]="salaryTo" formControlName="salaryTo" [disabled]="HideSalaryTo"></mat-slider>
+  </div>
+  <div class="col-auto">
+    <mat-checkbox class="example-margin" [(ngModel)]="HideSalaryTo" [ngModelOptions]="{standalone: true}">Не указывать</mat-checkbox>
+  </div>
+  <p *ngIf="!HideSalaryTo && !HideSalaryFrom && salaryFrom>salaryTo" class="salaryError">Неверный диапазон значений</p>
+  <p>{{HideSalaryFrom && salaryFrom>=0 ? '' : 'От ' + salaryFrom}} {{HideSalaryTo && salaryTo>=0 ? '' : 'до '+salaryTo}} {{!HideSalaryTo || !HideSalaryFrom ? 'руб.': 'Зарплата не указана'}}</p>
+</div>
+
+  <div class="mb-5">
+    <label for="workExperience" class="form-label">Опыт работы</label>
+    <div class="example-list-section">
+      <ul>
+        <li *ngFor="let item of experienceKeys()">
+          <mat-checkbox class="example-margin" (change)="toggleWorkExperience($event)" [value]="item">{{item}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <label for="workSchedule" class="form-label">График работы</label>
+    <div class="example-list-section">
+      <ul>
+        <li *ngFor="let item of scheduleKeys()">
+          <mat-checkbox class="example-margin" (change)="toggleWorkSchedule($event)" [value]="item">{{item}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="images" class="form-label">Картинки</label>
+    <div *ngIf="imageUrls.length > 0">
+      <mat-icon (click)="previousPage()">arrow_back_ios</mat-icon>
+      <img *ngIf="imageUrls[a]" class="form-image" [src]="imageUrls[a]">
+      <img *ngIf="imageUrls.length > 1 && imageUrls[(a+1)%imageUrls.length]" class="form-image"
+        [src]="imageUrls[(a+1)%imageUrls.length]">
+      <mat-icon (click)="nextPage()">arrow_forward_ios</mat-icon>
+    </div>
+    <input *ngIf="!post" type="file" accept=".jpg,.png, .jpeg" class="form-control" id="images"
+      placeholder="Выберите файл" (change)="handleFileInput($event)" multiple>
+  </div>
+
+  <button type="submit" class="btn btn-primary">{{post ? "Обновить" : "Создать"}}</button>
+</form>

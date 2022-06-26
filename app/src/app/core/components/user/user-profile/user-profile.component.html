@@ -1,0 +1,23 @@
+<div *ngIf="user; else emptyData" class="row">
+  <div class="d-flex justify-content-end">
+    <button *ngIf="user.id !== _userStorage.user?.id" mat-raised-button color="primary" (click)="createChat(user.id)">Написать</button>
+  </div>
+  <div class="col">
+    <span *ngIf="isAdmin()" class="badge bg-danger text-wrap">
+      Администратор
+    </span>
+    <h1>{{user.userName}} </h1>
+    <span class="block">{{user.name}}</span>
+    <img [src]="user.avatarUrl" class="profile-avatar">
+    <p>Почта: <span class="">{{user.email}}</span></p>
+    <p *ngIf="user.phoneNumber">Телефон: {{user.phoneNumber}}</p>
+    <p>Пол: {{user.gender | enum: 'Gender'}}</p>
+    <p>Роли: {{user.roles | enum: 'Roles'}}</p>
+    <p>День рождения: {{user.birthDate | date: 'dd-MM-yyyy'}}</p>
+    <button mat-raised-button color="primary" [routerLink]="['/posts/']" [queryParams]="{userId: user.id }">Показать посты пользователя</button>
+  </div>
+</div>
+
+<ng-template #emptyData>
+  <h4>Нет данных</h4>
+</ng-template>

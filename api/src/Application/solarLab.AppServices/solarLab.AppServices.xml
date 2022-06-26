@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>solarLab.AppServices</name>
+    </assembly>
+    <members>
+        <member name="M:solarLab.AppServices.Repositories.Category.ICategoryRepository.AddCategoryAsync(solarLab.Domain.Entities.CategoryEntity)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Category.ICategoryRepository.UpdateCategoryAsync(solarLab.Domain.Entities.CategoryEntity)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Category.ICategoryRepository.DeleteCategoryAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Comment.ICommentRepository.GetCommentsAsync">
+            <summary>
+            Возвращает все записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Comment.ICommentRepository.GetCommentsByPostAsync(System.Guid)">
+            <summary>
+            Возвращает все записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Comment.ICommentRepository.AddCommentAsync(solarLab.Domain.Entities.CommentEntity)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="comment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Comment.ICommentRepository.UpdateCommentAsync(solarLab.Domain.Entities.CommentEntity)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="comment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Comment.ICommentRepository.DeleteCommentAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Repositories.Post.IPostRepository">
+            <summary>
+            Репозиторий для работы с объявлениями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.IPostRepository.GetAcceptedPostsAsync">
+            <summary>
+            Возвращает все записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.IPostRepository.GetPostAsync(System.Guid)">
+            <summary>
+            Возвращает указанную запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.IPostRepository.AddPostAsync(solarLab.Domain.Entities.PostEntity)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.IPostRepository.UpdatePostAsync(solarLab.Domain.Entities.PostEntity)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="post"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.IPostRepository.DeletePostAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Repositories.Post.PostRepository.GetAcceptedPostsAsync">
+            <inheritdoc />
+        </member>
+        <member name="T:solarLab.AppServices.Services.Category.CategoryService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.CategoryService.AddCategoryAsync(solarLab.Contracts.Category.CategoryDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.CategoryService.DeleteCategoryAsync(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.CategoryService.DeleteCategoriesAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.CategoryService.GetCategoriesAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.CategoryService.UpdateCategoryAsync(solarLab.Contracts.Category.CategoryDto)">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Category.ICategoryService">
+            <summary>
+            Сервис для работы с категориями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.ICategoryService.GetCategoriesAsync">
+            <summary>
+            Возвращает все категории
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.ICategoryService.AddCategoryAsync(solarLab.Contracts.Category.CategoryDto)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.ICategoryService.UpdateCategoryAsync(solarLab.Contracts.Category.CategoryDto)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.ICategoryService.DeleteCategoryAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Category.ICategoryService.DeleteCategoriesAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Удаляет записи
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Chat.ChatService">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.ChatService.AddChatAsync(solarLab.Contracts.Chat.ChatDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.ChatService.AddUserToChatAsync(System.Guid,System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.ChatService.GetChatByIdAsync(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.ChatService.GetChatIdByUsers(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.ChatService.GetChatsByUserAsync">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Chat.IChatService">
+            <summary>
+            Сервис для работы с чатами
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.IChatService.GetChatsByUserAsync">
+            <summary>
+            Возвращает все записи
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.IChatService.GetChatByIdAsync(System.Guid)">
+            <summary>
+            Возвращает запись по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.IChatService.AddChatAsync(solarLab.Contracts.Chat.ChatDto)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.IChatService.GetChatIdByUsers(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Возвращает идентификатор чата, в котором состоят пользователи
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Chat.IChatService.AddUserToChatAsync(System.Guid,System.Guid)">
+            <summary>
+            Добавляет пользователя в чат
+            </summary>
+            <param name="chatId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Comment.CommentService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.AddCommentAsync(solarLab.Contracts.Comment.CommentDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.DeleteCommentAsync(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.DeleteCommentsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.GetCommentsAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.GetCommentsByPostAsync(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.CommentService.UpdateCommentAsync(solarLab.Contracts.Comment.CommentDto)">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Comment.ICommentService">
+            <summary>
+            Сервис для работы с комментариями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.GetCommentsAsync">
+            <summary>
+            Возвращает все записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.GetCommentsByPostAsync(System.Guid)">
+            <summary>
+            Возвращает все записи по идентификатору поста.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.AddCommentAsync(solarLab.Contracts.Comment.CommentDto)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.UpdateCommentAsync(solarLab.Contracts.Comment.CommentDto)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.DeleteCommentAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Comment.ICommentService.DeleteCommentsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Удаляет несколько записей
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Email.EmailService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Email.EmailService.SendEmailAsync(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Email.IEmailService">
+            <summary>
+            Сервис для работы с email
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Email.IEmailService.SendEmailAsync(System.String,System.String,System.String)">
+            <summary>
+            Отправка email
+            </summary>
+            <param name="email"></param>
+            <param name="subject"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.File.FileService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.File.FileService.UploadAsync(System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Http.IFormFile})">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.File.IFileService">
+            <summary>
+            Сервис для работы с файлами
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.File.IFileService.UploadAsync(System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Http.IFormFile})">
+            <summary>
+            Загрузить файл
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Identity.IdentityService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.ChangePasswordAsync(solarLab.Contracts.Identity.ChangePasswordDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.ConfirmEmailAsync(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.LoginAsync(solarLab.Contracts.Identity.LoginDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.ExternalLoginAsync(solarLab.Contracts.Identity.ExternalLoginDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.SignupAsync(solarLab.Contracts.Identity.RegisterDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.ResetPasswordAsync(solarLab.Contracts.Identity.ResetPasswordDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IdentityService.ForgotPasswordAsync(solarLab.Contracts.Identity.ForgotPasswordDto)">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Identity.IIdentityService">
+            <summary>
+            Сервис для работы с identity
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.LoginAsync(solarLab.Contracts.Identity.LoginDto)">
+            <summary>
+            Авторизация
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.ExternalLoginAsync(solarLab.Contracts.Identity.ExternalLoginDto)">
+            <summary>
+            Авторизация через сторонние сервисы
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.ResetPasswordAsync(solarLab.Contracts.Identity.ResetPasswordDto)">
+            <summary>
+            Сброс пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.ForgotPasswordAsync(solarLab.Contracts.Identity.ForgotPasswordDto)">
+            <summary>
+            Восстановление пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.SignupAsync(solarLab.Contracts.Identity.RegisterDto)">
+            <summary>
+            Регистрация
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.ConfirmEmailAsync(System.String,System.String)">
+            <summary>
+            Подтверждение почты
+            </summary>
+            <param name="userId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Identity.IIdentityService.ChangePasswordAsync(solarLab.Contracts.Identity.ChangePasswordDto)">
+            <summary>
+            Изменение пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Message.IMessageService">
+            <summary>
+            Сервис для работы с сообщениями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.IMessageService.DeleteMessageAsync(System.Guid)">
+            <summary>
+            Удаляет запись.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.IMessageService.UpdateMessageAsync(solarLab.Contracts.Message.MessageDto)">
+            <summary>
+            Обновляет записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.IMessageService.AddMessageAsync(solarLab.Contracts.Message.MessageDto)">
+            <summary>
+            Добавляет записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Message.MessageService">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.MessageService.AddMessageAsync(solarLab.Contracts.Message.MessageDto)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.MessageService.DeleteMessageAsync(System.Guid)">
+            <inheritdoc/>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Message.MessageService.UpdateMessageAsync(solarLab.Contracts.Message.MessageDto)">
+            <inheritdoc/>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Post.IPostService">
+            <summary>
+            Сервис для работы с объявлениями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetAcceptedPostsAsync">
+            <summary>
+            Возвращает все одобренные записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetNewPostsAsync">
+            <summary>
+            Возвращает все новые записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetRejectedPostsAsync">
+            <summary>
+            Возвращает все отклоненные записи.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetPostAsync(System.Guid)">
+            <summary>
+            Возвращает указанную запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetPostWithCommentsAsync(System.Guid)">
+            <summary>
+            Возвращает указанную запись с комментариями
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.AddPostAsync(solarLab.Contracts.Post.PostDto)">
+            <summary>
+            Добавляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.UpdatePostAsync(solarLab.Contracts.Post.PostDto)">
+            <summary>
+            Обновляет запись
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.UpdatePostsAsync(System.Collections.Generic.IEnumerable{solarLab.Contracts.Post.PostDto})">
+            <summary>
+            Обновляет несколько записей
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.AcceptPostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Одобряет посты
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.RejectPostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Отклоняет посты
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.DeletePostAsync(System.Guid)">
+            <summary>
+            Удаляет запись
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.DeletePostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Удаляет несколькой записей
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetAcceptedPostsBySearchAsync(System.String)">
+            <summary>
+            Возвращает все одобренные записи по строке поиска.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetAcceptedPostsByCategoryAsync(System.Guid)">
+            <summary>
+            Возвращает все одобренные записи по категории.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.IPostService.GetAcceptedPostsByUserAsync(System.Guid)">
+            <summary>
+            Возвращает все одобренные записи по идентификатору пользователя.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.Post.PostService">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetAcceptedPostsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetNewPostsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetPostAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.AddPostAsync(solarLab.Contracts.Post.PostDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.UpdatePostAsync(solarLab.Contracts.Post.PostDto)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.DeletePostAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetAcceptedPostsBySearchAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetRejectedPostsAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetPostWithCommentsAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetAcceptedPostsByCategoryAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.DeletePostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.UpdatePostsAsync(System.Collections.Generic.IEnumerable{solarLab.Contracts.Post.PostDto})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.AcceptPostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.RejectPostsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.Post.PostService.GetAcceptedPostsByUserAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="T:solarLab.AppServices.Services.User.IUserService">
+            <summary>
+            Сервис для работы с пользователями
+            </summary>
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.IUserService.AddAdminsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Добавить администраторов
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.IUserService.DeleteAdminsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Удалить администраторов
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.IUserService.GetUserAsync(System.Guid)">
+            <summary>
+            Возвращает пользователя по айди
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.IUserService.GetCurrentUserAsync">
+            <summary>
+            Возвращает текущего пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.IUserService.GetUsers">
+            <summary>
+            Возвращает всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.AppServices.Services.User.UserService">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.UserService.AddAdminsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.UserService.DeleteAdminsAsync(System.Collections.Generic.IEnumerable{System.Guid})">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.UserService.GetUserAsync(System.Guid)">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.UserService.GetCurrentUserAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:solarLab.AppServices.Services.User.UserService.GetUsers">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

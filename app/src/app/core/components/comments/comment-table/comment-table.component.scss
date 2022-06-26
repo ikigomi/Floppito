@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-column
+{
+  
+  &-select {
+    border-right: 1px solid currentColor;
+    padding-right: 25px;
+  }
+
+  &-authorUserName, &-body, &-details {
+    padding: 5px 15px;
+  }
+
+  &-body {
+    word-break: break-all;
+  }
+}
+
+.mat-row {
+  .mat-cell {
+    border-bottom: 1px solid ;
+    border-top: 1px solid ;
+    cursor: pointer;
+  }
+  &:hover .mat-cell{
+    border-color: currentColor;
+    background-color: rgba(216, 214, 214, 0.548);
+  }
+}

@@ -1,0 +1,29 @@
+.external {
+  margin-top: 30px;
+
+  mat-icon {
+    margin: 10px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    width: 60px;
+    height: 60px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.forgotPassword {
+  margin-top: 20px;
+  font-size: large;
+  a{
+    color: currentColor;
+  }
+}
+
+
+.vk, .facebook {
+  color: rgb(10, 102, 240);
+}

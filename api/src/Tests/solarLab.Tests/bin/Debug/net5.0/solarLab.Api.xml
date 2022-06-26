@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>solarLab.Api</name>
+    </assembly>
+    <members>
+        <member name="T:solarLab.Api.Controllers.CategoryController">
+            <summary>
+            Контроллер для категорий
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CategoryController.Get">
+            <summary>
+            Получение списка категорий
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CategoryController.Add(solarLab.Contracts.Category.CategoryDto)">
+            <summary>
+            Добавление категории
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CategoryController.Update(solarLab.Contracts.Category.CategoryDto)">
+            <summary>
+            Обновление категории
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CategoryController.Delete(System.Guid)">
+            <summary>
+            Удаление категории
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CategoryController.DeleteRange(System.Guid[])">
+            <summary>
+            Удаление категорий
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.ChatController">
+            <summary>
+            Контроллер для работы с чатами
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.ChatController.Get(System.Guid)">
+            <summary>
+            Получение чата по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.ChatController.GetByUser">
+            <summary>
+            Получение чатов для текущего пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.ChatController.Add(solarLab.Contracts.Chat.ChatDto)">
+            <summary>
+            Добавление чата
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.ChatController.GetIdByUsers(System.Guid[])">
+            <summary>
+            Получение чата для указанных пользователей
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.CommentController">
+            <summary>
+            Контроллер для работы с комментариями
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CommentController.Get">
+            <summary>
+            Получение списка комментариев
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CommentController.Add(solarLab.Contracts.Comment.CommentDto)">
+            <summary>
+            Добавление комментария
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CommentController.Update(solarLab.Contracts.Comment.CommentDto)">
+            <summary>
+            Обновление комментария
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CommentController.Delete(System.Guid)">
+            <summary>
+            Удаление комментария
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.CommentController.DeleteRange(System.Guid[])">
+            <summary>
+            Удаление комментариев
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.FileController">
+            <summary>
+            Контроллер для работы с файлами
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.FileController.Upload(Microsoft.AspNetCore.Http.IFormFile[])">
+            <summary>
+            Загрузить файл
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.IdentityController">
+            <summary>
+            Контроллер для авторизации/регистрации
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.Login(solarLab.Contracts.Identity.LoginDto)">
+            <summary>
+            Вход по логину \ паролю
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.ExternalLogin(solarLab.Contracts.Identity.ExternalLoginDto)">
+            <summary>
+            Вход через сторонний сервис
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.ResetPassword(solarLab.Contracts.Identity.ResetPasswordDto)">
+            <summary>
+            Сброс пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.ForgotPassword(solarLab.Contracts.Identity.ForgotPasswordDto)">
+            <summary>
+            Восстановление пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.Signup(solarLab.Contracts.Identity.RegisterDto)">
+            <summary>
+            Регистрация пользователя
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.ConfirmEmail(System.String,System.String)">
+            <summary>
+            Подтверждение email адреса
+            </summary>
+            <param name="userId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.IdentityController.ChangePassword(solarLab.Contracts.Identity.ChangePasswordDto)">
+            <summary>
+            Изменение пароля
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.MessageController">
+            <summary>
+            Контроллер для сообщений
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.MessageController.Update(solarLab.Contracts.Message.MessageDto)">
+            <summary>
+            Обновить сообщение
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.MessageController.Add(solarLab.Contracts.Message.MessageDto)">
+            <summary>
+            Добавить сообщение
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.PostController">
+            <summary>
+            Контроллер для постов
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.Get">
+            <summary>
+            Получение списка одобренных постов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetPostsBySearch(System.String)">
+            <summary>
+            Получение списка постов по строке поиска
+            </summary>
+            <param name="searchString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetPostsByCategory(System.Guid)">
+            <summary>
+            Получение списка постов по категории
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetPostsByUser(System.Guid)">
+            <summary>
+            Получение списка постов по пользователю
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetNewPosts">
+            <summary>
+            Получение новых постов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetRejectedPosts">
+            <summary>
+            Получение списка отвергнутых постов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.Get(System.Guid)">
+            <summary>
+            Получение поста по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.Add(solarLab.Contracts.Post.PostDto)">
+            <summary>
+            Добавление поста
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.Update(solarLab.Contracts.Post.PostDto)">
+            <summary>
+            Обновление поста
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.Delete(System.Guid)">
+            <summary>
+            Удаление поста
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.DeleteRange(System.Guid[])">
+            <summary>
+            Удаление постов
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.GetPostWithComments(System.Guid)">
+            <summary>
+            Получение поста с комментариями
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.AcceptPosts(System.Guid[])">
+            <summary>
+            Одобрить указанные посты
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.PostController.RejectPosts(System.Guid[])">
+            <summary>
+            Отклонить указанные посты
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Controllers.UserController">
+            <summary>
+            Контроллер для пользователей
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Controllers.UserController.GetUsers">
+            <summary>
+            Получить всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.UserController.GetUser(System.Guid)">
+            <summary>
+            Получить пользователя по идентификатору
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.UserController.GetUser">
+            <summary>
+            Получить текущего пользователя
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.UserController.AddAdmins(System.Guid[])">
+            <summary>
+            Добавление пользователям роли администратора
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Controllers.UserController.DeleteAdmins(System.Guid[])">
+            <summary>
+            Удаление у пользователей роли администратора
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Extensions.ServiceCollectionExtensions">
+            <summary>
+            Расширение для service collection
+            </summary>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавление сервисов для работы с сущностями
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавление репозиториев для работы с сущностями
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddValidators(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавление валидаторов 
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddIdentity(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавление и настройка identity
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddJwtAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Добавление и настройка jwt аунтефикации
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:solarLab.Api.Extensions.ServiceCollectionExtensions.AddSwaggerGen(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Добавление и настройка swagger
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:solarLab.Api.Middlewares.ErrorHandlerMiddleware">
+            <summary>
+            Middleware для перехвата исключений
+            </summary>
+        </member>
+    </members>
+</doc>

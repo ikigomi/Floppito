@@ -1,0 +1,12 @@
+<mat-button-toggle-group #group="matButtonToggleGroup" multiple>
+  <mat-button-toggle value="changePassword">Изменить пароль</mat-button-toggle>
+</mat-button-toggle-group>
+
+<div *ngIf="group.value == 'changePassword'">
+  <div *ngFor="let error of changePasswordErrors">
+    <div class="alert alert-danger">
+      {{error.message}}
+    </div>
+  </div>
+  <app-change-password-form (changePasswordEvent)="changePassword($event)"></app-change-password-form>
+</div>

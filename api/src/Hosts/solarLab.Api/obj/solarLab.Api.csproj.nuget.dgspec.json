@@ -1,0 +1,579 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\repos\\solarLab\\solarLab\\src\\Hosts\\solarLab.Api\\solarLab.Api.csproj": {}
+  },
+  "projects": {
+    "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\solarLab.AppServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\solarLab.AppServices.csproj",
+        "projectName": "solarLab.AppServices",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\solarLab.AppServices.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.55.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.13.1, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.15.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.13.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj",
+        "projectName": "solarLab.Contracts",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj",
+        "projectName": "solarLab.Domain",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Hosts\\solarLab.Api\\solarLab.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Hosts\\solarLab.Api\\solarLab.Api.csproj",
+        "projectName": "solarLab.Api",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Hosts\\solarLab.Api\\solarLab.Api.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Hosts\\solarLab.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\solarLab.AppServices.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Application\\solarLab.AppServices\\solarLab.AppServices.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\solarLab.DataAccess.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\solarLab.DataAccess.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\solarLab.Mapper.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\solarLab.Mapper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.3.4, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.55.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\solarLab.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\solarLab.DataAccess.csproj",
+        "projectName": "solarLab.DataAccess",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\solarLab.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj",
+        "projectName": "solarLab.Infrastructure",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\solarLab.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\solarLab.Mapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\solarLab.Mapper.csproj",
+        "projectName": "solarLab.Mapper",
+        "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\solarLab.Mapper.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\repos\\solarLab\\solarLab\\src\\Infrastructure\\solarLab.Mapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://repos.rts-tender.ru/repository/nuget-group/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Contracts\\solarLab.Contracts\\solarLab.Contracts.csproj"
+              },
+              "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj": {
+                "projectPath": "E:\\repos\\solarLab\\solarLab\\src\\Domain\\solarLab.Domain\\solarLab.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

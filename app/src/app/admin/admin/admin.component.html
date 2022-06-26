@@ -1,0 +1,48 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Посты
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-tab-group dynamicHeight>
+      <mat-tab label="Новые посты">
+        <app-posts-table [posts$]="newPosts$" (rejectEvent)="reject($event)" (acceptEvent)="accept($event)" (deleteEvent)="deletePosts($event)"></app-posts-table>
+      </mat-tab>
+      <mat-tab label="Одобренные посты">
+        <app-posts-table [posts$]="acceptedPosts$" (rejectEvent)="reject($event)" (deleteEvent)="deletePosts($event)" [showAcceptButton]="false"></app-posts-table>
+      </mat-tab>
+      <mat-tab label="Отклоненные посты">
+        <app-posts-table [posts$]="rejectedPosts$" (acceptEvent)="accept($event)" (deleteEvent)="deletePosts($event)" [showRejectButton]="false"></app-posts-table>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Категории
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-category-table [categories$]="categories$" (addEvent)="addCategory($event)" (deleteEvent)="deleteCategories($event)"></app-category-table>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Комментарии
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-comment-table [comments$]="comments$" (deleteEvent)="deleteComments($event)"></app-comment-table>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Пользователи
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-user-table [users$]="users$" (deleteAdminEvent)="deleteAdmins($event)" (addAdminEvent)="addAdmins($event)"></app-user-table>
+  </mat-expansion-panel>
+</mat-accordion>
+

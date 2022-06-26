@@ -1,0 +1,17 @@
+mat-icon {
+  transition-duration: 0.5s;
+  margin-left: 10px;
+
+  &.vk {
+    color: rgb(10, 102, 240);
+
+  }
+
+  &.instagram {
+    color: rgb(199, 25, 83);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

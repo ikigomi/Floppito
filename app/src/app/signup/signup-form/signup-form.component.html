@@ -1,0 +1,110 @@
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="userName" class="form-label">Логин</label>
+    <input type="text" class="form-control" [class.is-invalid]="userNameControl?.invalid && userNameControl?.touched"
+      id="userName" formControlName="userName">
+    <div class="invalid-feedback" *ngIf="userNameControl?.hasError('required')">
+      Введите логин
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Имя</label>
+    <input type="text" class="form-control" [class.is-invalid]="nameControl?.invalid && nameControl?.touched" id="name"
+ formControlName="name">
+    <div class="invalid-feedback" *ngIf="nameControl?.hasError('required')">
+      Введите имя
+    </div>
+    <div class="invalid-feedback" *ngIf="nameControl?.hasError('pattern')">
+      Имя может содержать только буквы
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" [class.is-invalid]="emailControl?.invalid && emailControl?.touched"
+      id="email" placeholder="name@example.com" formControlName="email">
+    <div class="invalid-feedback" *ngIf="emailControl?.hasError('required')">
+      Введите email
+    </div>
+    <div class="invalid-feedback" *ngIf="emailControl?.hasError('email')">
+      Некорректный email
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Пол</label>
+    <select type="text" class="form-control" [class.is-invalid]="genderControl?.invalid && genderControl?.touched"
+      id="gender" formControlName="gender">
+      <option value="" disabled>Выберите пол</option>
+      <option *ngFor="let gender of gendersKeys">{{gender}}</option>
+    </select>
+    <div class="invalid-feedback" *ngIf="genderControl?.hasError('required')">
+      Выберите пол
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="phoneNumber" class="form-label">Телефон</label>
+    <input type="tel" min="0" class="form-control"
+      [class.is-invalid]="phoneNumberControl?.invalid && phoneNumberControl?.touched" id="phoneNumber"
+      formControlName="phoneNumber">
+    <div class="invalid-feedback" *ngIf="phoneNumberControl?.hasError('pattern')">
+      Неверный формат номера телефона. Разрешены только цифры. Длина номера - 11
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Пароль</label>
+    <input [type]="hide ? 'password' : 'text'" id="password"
+      [class.is-invalid]="passwordControl?.invalid && passwordControl?.touched" class="form-control"
+      formControlName="password">
+    <mat-icon (click)="hide=!hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    <div class="invalid-feedback" *ngIf="passwordControl?.hasError('required')">
+      Введите пароль
+    </div>
+    <div class="invalid-feedback" *ngIf="passwordControl?.hasError('minlength')">
+      Пароль должен содержать больше 6 символов
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label">Подтвердите пароль</label>
+    <input [type]="hide ? 'password' : 'text'" id="confirmPassword"
+      [class.is-invalid]="confirmPasswordControl?.invalid && confirmPasswordControl?.touched" class="form-control"
+      formControlName="confirmPassword">
+    <div class="invalid-feedback" *ngIf="confirmPasswordControl?.hasError('required')">
+      Введите пароль еще раз
+    </div>
+    <div class="invalid-feedback" *ngIf="confirmPasswordControl?.hasError('mustMatch')">
+      Пароли не совпадают
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="birthDate" class="form-label">Дата рождения</label>
+    <input type="date" class="form-control" [class.is-invalid]="birthDateControl?.invalid && birthDateControl?.touched"
+      id="birthDate" formControlName="birthDate">
+    <div class="invalid-feedback" *ngIf="birthDateControl?.hasError('required')">
+      Введите дату рождения
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="avatar" class="form-label">Аватар</label>
+    <div *ngIf="imageUrl">
+      <img class="form-image" [src]="imageUrl">
+    </div>
+    <input type="file" accept=".jpg,.png, .jpeg" class="form-control" [class.is-invalid]="avatarControl?.invalid && avatarControl?.touched"
+      id="avatar" formControlName="avatar" (change)="handleFileInput($event)">
+    <div class="invalid-feedback" *ngIf="avatarControl?.hasError('required')">
+      Выберите аватар
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <div class="wrapper wrapper-invalid"
+      [class.wrapper-invalid]="recaptchaControl?.hasError('required') && avatarControl?.touched">
+      <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
+      </ngx-recaptcha2>
+    </div>
+    <div class="text-danger" *ngIf="recaptchaControl?.hasError('required') && avatarControl?.touched">
+      Каптча не пройдена
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+</form>
+

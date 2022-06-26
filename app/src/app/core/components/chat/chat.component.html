@@ -1,0 +1,49 @@
+<div *ngIf="currentChat || (chats && chats.length > 0); else emptyData" class="row">
+  <div class="col-3">
+    <div class="recent">
+      <div *ngFor="let chat of chats" class="item" (click)="openChat(chat.id)">
+        <img [src]="chat.messages[0].author.avatarUrl" alt="photo" class="person-avatar">
+        <div class="message">
+          <div class="message-time">{{chat.messages[0].creationDate | date: 'MMM d, h:mm a':'+0700'}}</div>
+          <div class="message-content">{{chat.messages[0].body}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+
+    <div *ngIf="currentChat" class="chat">
+      <div *ngIf="membersExceptYou && membersExceptYou.length === 1" class="header">
+        <a routerLink="/user/{{membersExceptYou[0].id}}"><img [src]="membersExceptYou[0].avatarUrl" alt="photo"
+            class="person-avatar"></a>
+        <div class="name">
+          <h2>{{membersExceptYou[0].userName}}</h2>
+        </div>
+      </div>
+
+      <div class="content" #content>
+        <div *ngFor="let message of currentChat.messages" class="item"
+          [class.item--responder]="message.author.id === _userStorage.user?.id">
+          <img [src]="message.author.avatarUrl" alt="photo" class="person-avatar">
+
+          <div class="message">
+            <div class="message-time">{{message.creationDate | date: 'MMM d, h:mm a':'+0700'}}</div>
+            <div class="message-content">{{message.body}}</div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="_userStorage.user" class="send-message">
+        <div class="d-flex">
+          <img class="person-avatar rounded-circle" [src]="_userStorage.user?.avatarUrl"><textarea #newMessageBody
+            class="form-control ml-1 shadow-none textarea"></textarea>
+        </div>
+        <div class="mt-2 text-right"><button class="btn btn-primary btn-sm shadow-none" type="button"
+            (click)="send()">Отправить</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyData>
+  <h4>Нет активных чатов. Для начала диалога откроте профиль пользователя и нажмите кнопку "Написать"</h4>
+</ng-template>

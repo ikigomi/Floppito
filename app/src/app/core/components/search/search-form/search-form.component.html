@@ -1,0 +1,73 @@
+<form [formGroup]="searchForm" (ngSubmit)="submit()">
+  <div class="mb-5">
+    <div>
+      <label for="searchString" class="form-label">Ключевые слова</label>
+      <input type="text" class="form-control"
+        [class.is-invalid]="searchStringControl?.invalid && searchStringControl?.touched" id="searchString"
+        placeholder="Например: C# developer" formControlName="searchString">
+      <div id="searchStringHelper" class="form-text">Введите ключевые слова, разделяя пробелом, либо запятой</div>
+    </div>
+
+    <div class="m-3">
+      <label class="form-label">Искать в</label>
+      <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName="searchIn"
+      [(ngModel)]="searchIn">
+      <mat-radio-button class="example-radio-button" *ngFor="let item of searchInKeys()" [value]="item">
+        {{item}}
+      </mat-radio-button>
+    </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="mb-5 row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="salaryFrom" class="col-form-label">Зарплата от</label>
+    </div>
+    <div class="col-auto">
+      <input type="number" class="form-control"
+        [class.is-invalid]="salaryFromControl?.invalid && salaryFromControl?.touched" id="salaryFrom"
+        formControlName="salaryFrom">
+    </div>
+    <div class="col-auto">
+      руб.
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <label for="workExperience" class="form-label">Опыт работы</label>
+    <div class="example-list-section">
+      <ul>
+        <li *ngFor="let item of experienceKeys()">
+          <mat-checkbox class="example-margin" (change)="toggleWorkExperience($event)" [value]="item">{{item}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <label for="workSchedule" class="form-label">График работы</label>
+    <div class="example-list-section">
+      <ul>
+        <li *ngFor="let item of scheduleKeys()">
+          <mat-checkbox class="example-margin" (change)="toggleWorkSchedule($event)" [value]="item">{{item}}
+          </mat-checkbox>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <label for="sortBy" class="form-label">Сортировка</label>
+    <div class="m-3 form-check">
+      <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" formControlName="sortBy"
+        [(ngModel)]="sorting" multiply>
+        <mat-radio-button class="example-radio-button" *ngFor="let item of sortingKeys()" [value]="item">
+          {{item}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Поиск</button>
+</form>
